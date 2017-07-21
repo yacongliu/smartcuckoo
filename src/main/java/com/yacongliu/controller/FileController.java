@@ -28,6 +28,7 @@ public class FileController {
 
     @RequestMapping(value = "/upload",method = RequestMethod.POST)
     public String upload(@RequestParam MultipartFile myfile, HttpSession session) throws IOException {
+            // 如果有多个文件上传的话，就需要用 MultipartFile[]
 
             if (myfile.isEmpty()) {
                 System.out.println("文件未上传");
