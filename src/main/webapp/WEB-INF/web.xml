@@ -17,6 +17,7 @@
     <listener>
         <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
     </listener>
+
     <!-- 编码过滤器，以UTF8编码 -->
     <filter>
         <filter-name>encodingFilter</filter-name>
@@ -30,6 +31,16 @@
         <filter-name>encodingFilter</filter-name>
         <url-pattern>/*</url-pattern>
     </filter-mapping>
+
+
+    <!--处理静态资源文件，必须放在DispatcherServlet前面-->
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>*.js</url-pattern>
+        <url-pattern>*.css</url-pattern>
+        <url-pattern>/assets/*"</url-pattern>
+    </servlet-mapping>
+
 
     <!-- 配置SpringMVC框架入口DispatcherServlet -->
     <servlet>
