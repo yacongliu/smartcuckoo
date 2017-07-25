@@ -32,11 +32,10 @@
             <a href="${path }/signup.jsp" class="btn btn-link">Sign up</a>
             <br>
         </div>
-        
+
 
     </form>
 </div>
-s
 <!--container end-->
 
 
