@@ -1,14 +1,9 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: love2
-  Date: 2017/7/21
-  Time: 16:43
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@include file="/common/global.jsp" %>
 <html>
 <head>
     <title>welcome</title>
+    <link rel="shortcut icon" href="${staticPath }/assets/img/favicon.ico">
 </head>
 <body>
  上传成功！

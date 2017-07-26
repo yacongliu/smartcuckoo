@@ -6,6 +6,7 @@
     <%@include file="/common/basejs.jsp" %>
     <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
     <title>文件上传</title>
+    <link rel="shortcut icon" href="${staticPath }/assets/img/favicon.ico">
 </head>
 <body>
    <form action="${path }/file/upload" method="post" enctype="multipart/form-data">
