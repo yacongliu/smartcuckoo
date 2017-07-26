@@ -22,7 +22,7 @@
         <button type="submit" class="btn btn-primary btn-primary btn-lg btn-block">Sign up</button>
         <div class="link">
             <br>
-            <a href="${path }/login.jsp" class="btn btn-link">Sign in</a>
+                <a href="${path }/login.jsp" class="btn btn-link">Sign in</a>
             <br>
         </div>
     </form>

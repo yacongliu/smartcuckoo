@@ -10,7 +10,6 @@
     <link rel="shortcut icon" href="${staticPath }/assets/img/favicon.ico">
     <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
     <link rel="stylesheet" href="${staticPath }/assets/css/signin.css" charset="utf-8">
-
 </head>
 <body>
 <!--container start-->
