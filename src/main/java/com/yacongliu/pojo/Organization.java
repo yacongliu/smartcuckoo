@@ -13,100 +13,107 @@ import java.util.Date;
  */
 @Table(name = "organization")
 public class Organization implements Serializable {
-    private static final long serialVersionUID = 1611248676229453163L;
+        private static final long serialVersionUID = 1611248676229453163L;
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
-    /*组织名称*/
-    private String name;
-    /*地址*/
-    private String address;
-    /*编号*/
-    private String code;
-    /*图标*/
-    private String icon;
-    /*父级主键*/
-    private Long pid;
-    /*排序*/
-    private Integer seq;
-    private Date createTime;
+        @Id
+        @GeneratedValue(strategy = GenerationType.AUTO)
+        private Long id;
 
-    public Long getId() {
-        return id;
-    }
+        /*组织名称*/
+        private String name;
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+        /*地址*/
+        private String address;
 
-    public String getName() {
-        return name;
-    }
+        /*编号*/
+        private String code;
 
-    public void setName(String name) {
-        this.name = name;
-    }
+        /*图标*/
+        private String icon;
 
-    public String getAddress() {
-        return address;
-    }
+        /*父级主键*/
+        private Long pid;
 
-    public void setAddress(String address) {
-        this.address = address;
-    }
+        /*排序*/
+        private Integer seq;
 
-    public String getCode() {
-        return code;
-    }
+        private Date createTime;
 
-    public void setCode(String code) {
-        this.code = code;
-    }
+        public Long getId() {
+                return id;
+        }
 
-    public String getIcon() {
-        return icon;
-    }
+        public void setId(Long id) {
+                this.id = id;
+        }
 
-    public void setIcon(String icon) {
-        this.icon = icon;
-    }
+        public String getName() {
+                return name;
+        }
 
-    public Long getPid() {
-        return pid;
-    }
+        public void setName(String name) {
+                this.name = name;
+        }
 
-    public void setPid(Long pid) {
-        this.pid = pid;
-    }
+        public String getAddress() {
+                return address;
+        }
 
-    public Integer getSeq() {
-        return seq;
-    }
+        public void setAddress(String address) {
+                this.address = address;
+        }
 
-    public void setSeq(Integer seq) {
-        this.seq = seq;
-    }
+        public String getCode() {
+                return code;
+        }
 
-    public Date getCreateTime() {
-        return createTime;
-    }
+        public void setCode(String code) {
+                this.code = code;
+        }
 
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
-    }
+        public String getIcon() {
+                return icon;
+        }
 
-    @Override
-    public String toString() {
-        return "Organization{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", address='" + address + '\'' +
-                ", code='" + code + '\'' +
-                ", icon='" + icon + '\'' +
-                ", pid=" + pid +
-                ", seq=" + seq +
-                ", createTime=" + createTime +
-                '}';
-    }
+        public void setIcon(String icon) {
+                this.icon = icon;
+        }
+
+        public Long getPid() {
+                return pid;
+        }
+
+        public void setPid(Long pid) {
+                this.pid = pid;
+        }
+
+        public Integer getSeq() {
+                return seq;
+        }
+
+        public void setSeq(Integer seq) {
+                this.seq = seq;
+        }
+
+        public Date getCreateTime() {
+                return createTime;
+        }
+
+        public void setCreateTime(Date createTime) {
+                this.createTime = createTime;
+        }
+
+        @Override
+        public String toString() {
+                return "Organization{" +
+                        "id=" + id +
+                        ", name='" + name + '\'' +
+                        ", address='" + address + '\'' +
+                        ", code='" + code + '\'' +
+                        ", icon='" + icon + '\'' +
+                        ", pid=" + pid +
+                        ", seq=" + seq +
+                        ", createTime=" + createTime +
+                        '}';
+        }
 }

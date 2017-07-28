@@ -9,49 +9,51 @@ import java.io.Serializable;
  */
 @Table(name = "role_resource")
 public class RoleResource implements Serializable {
-    private static final long serialVersionUID = 6836909915874853111L;
+        private static final long serialVersionUID = 6836909915874853111L;
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
-    /*角色id*/
-    @Column(name = "role_id")
-    private Long roleId;
-    /*资源id*/
-    @Column(name = "resource_id")
-    private Long resourceId;
+        @Id
+        @GeneratedValue(strategy = GenerationType.AUTO)
+        private Long id;
 
-    public Long getId() {
-        return id;
-    }
+        /*角色id*/
+        @Column(name = "role_id")
+        private Long roleId;
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+        /*资源id*/
+        @Column(name = "resource_id")
+        private Long resourceId;
 
-    public Long getRoleId() {
-        return roleId;
-    }
+        public Long getId() {
+                return id;
+        }
 
-    public void setRoleId(Long roleId) {
-        this.roleId = roleId;
-    }
+        public void setId(Long id) {
+                this.id = id;
+        }
 
-    public Long getResourceId() {
-        return resourceId;
-    }
+        public Long getRoleId() {
+                return roleId;
+        }
 
-    public void setResourceId(Long resourceId) {
-        this.resourceId = resourceId;
-    }
+        public void setRoleId(Long roleId) {
+                this.roleId = roleId;
+        }
 
-    @Override
-    public String toString() {
-        return "RoleResource{" +
-                "id=" + id +
-                ", roleId=" + roleId +
-                ", resourceId=" + resourceId +
-                '}';
-    }
+        public Long getResourceId() {
+                return resourceId;
+        }
+
+        public void setResourceId(Long resourceId) {
+                this.resourceId = resourceId;
+        }
+
+        @Override
+        public String toString() {
+                return "RoleResource{" +
+                        "id=" + id +
+                        ", roleId=" + roleId +
+                        ", resourceId=" + resourceId +
+                        '}';
+        }
 }
 

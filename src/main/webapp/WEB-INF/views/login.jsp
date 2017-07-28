@@ -14,7 +14,7 @@
 <body>
 <!--container start-->
 <div class="container">
-    <form action="#" class="form-signin">
+    <form action="${path }/login" class="form-signin" method="post">
         <h3>Please sign in</h3>
         <input type="text" name="username" id="inputUsername" class="form-control" placeholder="Username" required
                autofocus><br>
@@ -28,7 +28,7 @@
         <button class="btn btn-primary btn-primary btn-lg btn-block" type="submit" id="signin">Sign in</button>
         <div class="link">
             <br>
-            <a href="${path }/signup.jsp" class="btn btn-link">Sign up</a>
+            <a href="${path }/WEB-INF/views/signup.jsp" class="btn btn-link">Sign up</a>
             <br>
         </div>
 

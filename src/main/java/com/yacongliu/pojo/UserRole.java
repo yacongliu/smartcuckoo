@@ -9,49 +9,51 @@ import java.io.Serializable;
  */
 @Table(name = "user_role")
 public class UserRole implements Serializable {
-    private static final long serialVersionUID = 3907367313235857129L;
+        private static final long serialVersionUID = 3907367313235857129L;
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
-    /*用户id*/
-    @Column(name = "user_id")
-    private Long userId;
-    /*角色id*/
-    @Column(name = "role_id")
-    private Long roleId;
+        @Id
+        @GeneratedValue(strategy = GenerationType.AUTO)
+        private Long id;
 
-    public Long getId() {
-        return id;
-    }
+        /*用户id*/
+        @Column(name = "user_id")
+        private Long userId;
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+        /*角色id*/
+        @Column(name = "role_id")
+        private Long roleId;
 
-    public Long getUserId() {
-        return userId;
-    }
+        public Long getId() {
+                return id;
+        }
 
-    public void setUserId(Long userId) {
-        this.userId = userId;
-    }
+        public void setId(Long id) {
+                this.id = id;
+        }
 
-    public Long getRoleId() {
-        return roleId;
-    }
+        public Long getUserId() {
+                return userId;
+        }
 
-    public void setRoleId(Long roleId) {
-        this.roleId = roleId;
-    }
+        public void setUserId(Long userId) {
+                this.userId = userId;
+        }
 
-    @Override
-    public String toString() {
-        return "UserRole{" +
-                "id=" + id +
-                ", userId=" + userId +
-                ", roleId=" + roleId +
-                '}';
-    }
+        public Long getRoleId() {
+                return roleId;
+        }
+
+        public void setRoleId(Long roleId) {
+                this.roleId = roleId;
+        }
+
+        @Override
+        public String toString() {
+                return "UserRole{" +
+                        "id=" + id +
+                        ", userId=" + userId +
+                        ", roleId=" + roleId +
+                        '}';
+        }
 }
 

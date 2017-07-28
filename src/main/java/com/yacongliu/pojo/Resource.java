@@ -9,8 +9,8 @@ import java.util.Date;
  * @desc 资源
  * @since v1.0.0
  */
-@Table(name = "resouce")
-public class Resouce implements Serializable {
+@Table(name = "resource")
+public class Resource implements Serializable {
     private static final long serialVersionUID = 5476057805235345290L;
 
     @Id
@@ -128,7 +128,7 @@ public class Resouce implements Serializable {
 
     @Override
     public String toString() {
-        return "Resouce{" +
+        return "Resource{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", url='" + url + '\'' +

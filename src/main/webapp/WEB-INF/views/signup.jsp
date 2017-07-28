@@ -13,7 +13,7 @@
 </head>
 <body>
 <div class="container">
-    <form action="#" class="form-signup">
+    <form action="${path }/regist" class="form-signup" method="post">
         <h3> Create your account</h3>
         <input type="text" name="username" class="form-control" placeholder="Username" required autofocus><br>
         <input type="text" name="email" class="form-control" placeholder="Email Adress" required><br>
@@ -22,7 +22,7 @@
         <button type="submit" class="btn btn-primary btn-primary btn-lg btn-block">Sign up</button>
         <div class="link">
             <br>
-                <a href="${path }/login.jsp" class="btn btn-link">Sign in</a>
+                <a href="${path }/WEB-INF/views/login.jsp" class="btn btn-link">Sign in</a>
             <br>
         </div>
     </form>

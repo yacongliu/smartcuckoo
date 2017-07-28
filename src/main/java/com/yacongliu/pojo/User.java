@@ -11,78 +11,92 @@ import java.util.Date;
  */
 @Table(name = "user")
 public class User implements Serializable {
-    private static final long serialVersionUID = -6538151151577691570L;
+        private static final long serialVersionUID = -6538151151577691570L;
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
-    private String username;
-    private String password;
-    /*密码加密盐*/
-    private String salt;
-    /*用户状态*/
-    private Integer status;
-    @Column(name = "create_time")
-    private Date createTime;
+        @Id
+        @GeneratedValue(strategy = GenerationType.IDENTITY)
+        private Long id;
 
+        private String username;
 
-    public Long getId() {
-        return id;
-    }
+        private String password;
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+        private String email;
 
-    public String getUsername() {
-        return username;
-    }
+        public String getEmail() {
+                return email;
+        }
 
-    public void setUsername(String username) {
-        this.username = username;
-    }
+        public void setEmail(String email) {
+                this.email = email;
+        }
 
-    public String getPassword() {
-        return password;
-    }
+        /*密码加密盐*/
+        private String salt;
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
+        /*用户状态*/
+        private Integer status;
 
-    public String getSalt() {
-        return salt;
-    }
+        @Column(name = "create_time")
+        private Date createTime;
 
-    public void setSalt(String salt) {
-        this.salt = salt;
-    }
+        public Long getId() {
+                return id;
+        }
 
-    public Integer getStatus() {
-        return status;
-    }
+        public void setId(Long id) {
+                this.id = id;
+        }
 
-    public void setStatus(Integer status) {
-        this.status = status;
-    }
+        public String getUsername() {
+                return username;
+        }
 
-    public Date getCreateTime() {
-        return createTime;
-    }
+        public void setUsername(String username) {
+                this.username = username;
+        }
 
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
-    }
+        public String getPassword() {
+                return password;
+        }
 
-    @Override
-    public String toString() {
-        return "User{" +
-                "id=" + id +
-                ", username='" + username + '\'' +
-                ", password='" + password + '\'' +
-                ", salt='" + salt + '\'' +
-                ", status=" + status +
-                ", createTime=" + createTime +
-                '}';
-    }
+        public void setPassword(String password) {
+                this.password = password;
+        }
+
+        public String getSalt() {
+                return salt;
+        }
+
+        public void setSalt(String salt) {
+                this.salt = salt;
+        }
+
+        public Integer getStatus() {
+                return status;
+        }
+
+        public void setStatus(Integer status) {
+                this.status = status;
+        }
+
+        public Date getCreateTime() {
+                return createTime;
+        }
+
+        public void setCreateTime(Date createTime) {
+                this.createTime = createTime;
+        }
+
+        @Override
+        public String toString() {
+                return "User{" +
+                        "id=" + id +
+                        ", username='" + username + '\'' +
+                        ", password='" + password + '\'' +
+                        ", salt='" + salt + '\'' +
+                        ", status=" + status +
+                        ", createTime=" + createTime +
+                        '}';
+        }
 }
