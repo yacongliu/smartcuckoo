@@ -40,6 +40,7 @@ public class UserController {
         public String regist(UserVo userVo) {
                 userService.insertByVo(userVo);
                 return "login";
+                
         }
 
 }
