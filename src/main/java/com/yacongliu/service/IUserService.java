@@ -2,6 +2,7 @@ package com.yacongliu.service;
 
 import com.yacongliu.pojo.User;
 import com.yacongliu.service.common.IService;
+import com.yacongliu.vo.PageInfoVo;
 import com.yacongliu.vo.UserVo;
 
 /**
@@ -10,4 +11,12 @@ import com.yacongliu.vo.UserVo;
  */
 public interface IUserService extends IService<User> {
         void insertByVo(UserVo userVo);
+
+        void updateByVo(UserVo userVo);
+
+        void updatePwdByUserId(Long userId, String md5Hex);
+
+        void selectDataGrid(PageInfoVo pageInfo);
+
+        void deleteUserById(Long id);
 }

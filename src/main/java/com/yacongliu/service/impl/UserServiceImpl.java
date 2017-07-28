@@ -6,6 +6,7 @@ import com.yacongliu.mapper.UserRoleMapper;
 import com.yacongliu.pojo.User;
 import com.yacongliu.service.IUserService;
 import com.yacongliu.service.common.ServiceImpl;
+import com.yacongliu.vo.PageInfoVo;
 import com.yacongliu.vo.UserVo;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +27,22 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
         @Autowired
         private UserRoleMapper userRoleMapper;
 
+        public void updateByVo(UserVo userVo) {
+
+        }
+
+        public void updatePwdByUserId(Long userId, String md5Hex) {
+
+        }
+
+        public void selectDataGrid(PageInfoVo pageInfo) {
+
+        }
+
+        public void deleteUserById(Long id) {
+
+        }
+
         /**
          * @param entity 实体对象
          * @return
@@ -39,6 +56,5 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
                 user.setCreateTime(new Date());
 
                 super.insert(user);
-
         }
 }
