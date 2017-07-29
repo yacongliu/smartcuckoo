@@ -14,7 +14,8 @@ import java.util.List;
  * @since v1.0.0
  */
 public interface IResourceService extends IService<Resource> {
-        List<Resource> selectAll();
+
+        List<Resource> selectList();
 
         List<Tree> selectAllMenu();
 

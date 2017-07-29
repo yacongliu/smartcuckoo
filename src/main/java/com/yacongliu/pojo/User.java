@@ -37,6 +37,12 @@ public class User implements Serializable {
         /*用户状态*/
         private Integer status;
 
+        @Column(name = "user_type")
+        private Integer userType;
+
+        @Column(name = "organization_id")
+        private Integer organizationId;
+
         @Column(name = "create_time")
         private Date createTime;
 
@@ -77,7 +83,7 @@ public class User implements Serializable {
         }
 
         public void setStatus(Integer status) {
-                this.status = status;
+                this.status = status == null ? 1 : 0;
         }
 
         public Date getCreateTime() {

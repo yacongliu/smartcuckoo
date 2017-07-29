@@ -12,6 +12,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * Organization 表数据服务层接口实现类
+ *
  * @author yacongliu on 2017/7/29.
  * @since v1.0.0
  */
@@ -38,7 +40,7 @@ public class OrganizationServiceImpl extends ServiceImpl<OrganizationMapper, Org
         public List<Organization> selectTreeGrid() {
                 /*排序*/
                 Example example = new Example(Organization.class);
-                example.setOrderByClause("seq");
+                example.setOrderByClause("seq asc");
                 return this.organizationMapper.selectByExample(example);
         }
 }
