@@ -3,6 +3,8 @@ package com.yacongliu.vo;
 import java.io.Serializable;
 
 /**
+ * 操作结果
+ *
  * @author yacongliu on 2017/7/21.
  * @since v1.0.0
  */
