@@ -2,10 +2,10 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.yacongliu</groupId>
-  <artifactId>smallcuckoo</artifactId>
+  <artifactId>smartcuckoo</artifactId>
   <packaging>war</packaging>
   <version>1.0-SNAPSHOT</version>
-  <name>smallcuckoo Maven Webapp</name>
+  <name>smartcuckoo Maven Webapp</name>
   <url>http://maven.apache.org</url>
     <!-- 集中定义依赖版本号 -->
     <properties>
@@ -175,6 +175,6 @@
   </dependencies>
 
   <build>
-    <finalName>smallcuckoo</finalName>
+    <finalName>smartcuckoo</finalName>
   </build>
 </project>
