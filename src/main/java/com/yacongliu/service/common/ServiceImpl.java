@@ -11,9 +11,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.util.List;
 
 /**
+ * IService 实现类（ 泛型：M 是 mapper 对象，T 是实体 )
+ *
  * @author yacongliu on 2017/7/28.
- * @since v1.0.0
  * @desc IService 实现类（ 泛型：M 是 mapper 对象，T 是实体 )
+ * @since v1.0.0
  */
 public class ServiceImpl<M extends Mapper<T>, T> implements IService<T> {
         @Autowired
@@ -87,6 +89,7 @@ public class ServiceImpl<M extends Mapper<T>, T> implements IService<T> {
         public List<T> selectAll() {
                 return this.mapper.select(null);
         }
+
 
         /**
          * @param entity

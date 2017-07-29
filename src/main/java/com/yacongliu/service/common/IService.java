@@ -5,6 +5,8 @@ import com.github.pagehelper.PageInfo;
 import java.util.List;
 
 /**
+ * 顶级Service
+ *
  * @author yacongliu on 2017/7/28.
  * @desc 顶级Service
  * @since v1.0.0

@@ -33,7 +33,6 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
 
         public void updatePwdByUserId(Long userId, String md5Hex) {
 
-
         }
 
         public void selectDataGrid(PageInfoVo pageInfo) {
@@ -42,8 +41,10 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
 
         public void deleteUserById(Long id) {
 
+        }
 
-
+        public UserVo selectVoById(Long id) {
+                return null;
         }
 
         /**
@@ -60,4 +61,5 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
 
                 super.insert(user);
         }
+
 }

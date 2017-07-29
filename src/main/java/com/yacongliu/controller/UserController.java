@@ -1,5 +1,6 @@
 package com.yacongliu.controller;
 
+import com.yacongliu.controller.common.BaseController;
 import com.yacongliu.service.impl.UserServiceImpl;
 import com.yacongliu.vo.UserVo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,12 +9,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
+ * 用户管理
+ *
  * @author yacongliu on 2017/7/27.
+ * @desc
  * @since v1.0.0
- * @desc 用户管理
  */
 @Controller
-public class UserController {
+public class UserController extends BaseController {
 
         @Autowired
         private UserServiceImpl userService;

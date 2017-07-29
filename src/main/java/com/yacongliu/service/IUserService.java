@@ -10,7 +10,10 @@ import com.yacongliu.vo.UserVo;
  * @since v1.0.0
  */
 public interface IUserService extends IService<User> {
+
         void insertByVo(UserVo userVo);
+
+        UserVo selectVoById(Long id);
 
         void updateByVo(UserVo userVo);
 

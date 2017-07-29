@@ -1,4 +1,4 @@
-package com.yacongliu.controller;
+package com.yacongliu.controller.common;
 
 import com.yacongliu.vo.Result;
 import org.slf4j.Logger;
@@ -67,8 +67,8 @@ public class BaseController {
         }
 
         /**
-         * ajax 失败
-         *
+         * ajax error
+         * @param msg 消息
          * @return {Object}
          */
         public Object renderError(String msg) {

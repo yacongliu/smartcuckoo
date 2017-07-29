@@ -44,8 +44,14 @@ public class UserVo implements Serializable {
 
         private List<Role> rolesList;
 
+        /*
+            组织名称
+         */
         private String organizationName;
 
+        /*
+            角色
+         */
         private String roleIds;
 
         private Date createdateStart;
