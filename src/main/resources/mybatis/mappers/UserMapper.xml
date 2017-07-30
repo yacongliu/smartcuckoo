@@ -4,7 +4,7 @@
 
     <resultMap id="userVoResultMap" type="com.yacongliu.vo.UserVo">
         <id column="id" property="id" jdbcType="BIGINT"/>
-        <result column="name" property="name" jdbcType="VARCHAR"/>
+        <result column="username" property="username" jdbcType="VARCHAR"/>
         <result column="password" property="password" jdbcType="VARCHAR"/>
         <result column="user_type" property="userType" jdbcType="TINYINT"/>
         <result column="status" property="status" jdbcType="TINYINT"/>
@@ -19,11 +19,10 @@
         </collection>
     </resultMap>
 
-
     <select id="selectUserVoById" resultMap="userVoResultMap" parameterType="java.lang.Long">
         SELECT
         t.id,
-        t.`name`,
+        t.`username`,
         `password`,
         user_type,
         t.`status`,

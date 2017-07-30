@@ -7,8 +7,8 @@ import java.util.List;
 
 /**
  * @author yacongliu on 2017/7/27.
- * @since v1.0.0
  * @desc tree 组件
+ * @since v1.0.0
  */
 public class Tree implements Serializable {
         private static final long serialVersionUID = -6741740273121371208L;
@@ -24,8 +24,6 @@ public class Tree implements Serializable {
 
         private Object attributes;
 
-        /*null 不输出*/
-        @JsonInclude(JsonInclude.Include.NON_NULL)
         private List<Tree> children;
 
         private String iconCls;

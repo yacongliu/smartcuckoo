@@ -1,6 +1,7 @@
 package com.yacongliu.service.impl;
 
-import com.fasterxml.jackson.databind.util.BeanUtil;
+import com.github.pagehelper.PageHelper;
+import com.github.pagehelper.PageInfo;
 import com.yacongliu.mapper.UserMapper;
 import com.yacongliu.mapper.UserRoleMapper;
 import com.yacongliu.pojo.User;
@@ -14,6 +15,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
+import java.util.List;
+import java.util.Map;
 
 /**
  * User 表数据服务层接口实现类
@@ -38,8 +41,12 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
 
         }
 
-        public void selectDataGrid(PageInfoVo pageInfo) {
-
+        public void selectDataGrid(PageInfoVo pageInfoVo) {
+                PageHelper.startPage(pageInfoVo.getNowpage(), pageInfoVo.getPagesize());
+                List<Map<String, Object>> lists = this.userMapper.selectUserPage(pageInfoVo.getCondition());
+                PageInfo<Map<String, Object>> pageInfo = new PageInfo<Map<String, Object>>(lists);
+                pageInfoVo.setRows(pageInfo.getList());
+                pageInfoVo.setTotal((int) pageInfo.getTotal());
         }
 
         public void deleteUserById(Long id) {
@@ -47,7 +54,8 @@ public class UserServiceImpl extends ServiceImpl<UserMapper, User> implements IU
         }
 
         public UserVo selectVoById(Long id) {
-                return null;
+                return this.userMapper.selectUserVoById(id);
+
         }
 
         public void insertByVo(UserVo userVo) {

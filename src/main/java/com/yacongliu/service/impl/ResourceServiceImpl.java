@@ -8,6 +8,7 @@ import com.yacongliu.service.common.ServiceImpl;
 import com.yacongliu.util.CollectionUtil;
 import com.yacongliu.vo.Tree;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,6 +19,7 @@ import java.util.List;
  * @author yacongliu on 2017/7/29.
  * @since v1.0.0
  */
+@Service
 public class ResourceServiceImpl extends ServiceImpl<ResourceMapper, Resource> implements IResourceService {
         // 资源类型：菜单
         private static final int RESOURCE_MENU = 0;
@@ -26,7 +28,7 @@ public class ResourceServiceImpl extends ServiceImpl<ResourceMapper, Resource> i
         private ResourceMapper resourceMapper;
 
         public List<Resource> selectList() {
-                Example example = new Example(ResourceServiceImpl.class);
+                Example example = new Example(Resource.class);
                 example.setOrderByClause("seq asc");
                 return this.resourceMapper.selectByExample(example);
         }
@@ -35,6 +37,7 @@ public class ResourceServiceImpl extends ServiceImpl<ResourceMapper, Resource> i
                 List<Tree> trees = new ArrayList<Tree>();
                 //查询所有的菜单
                 List<Resource> resourceList = this.selectByType(RESOURCE_MENU);
+
                 if (CollectionUtil.isEmpty(resourceList)) {
                         return null;
                 }
@@ -75,7 +78,7 @@ public class ResourceServiceImpl extends ServiceImpl<ResourceMapper, Resource> i
         }
 
         public List<Resource> selectByType(Integer type) {
-                Example example = new Example(ResourceServiceImpl.class);
+                Example example = new Example(Resource.class);
                 example.createCriteria().andEqualTo("resourceType", type);
                 example.setOrderByClause("seq asc");
                 return this.resourceMapper.selectByExample(example);
