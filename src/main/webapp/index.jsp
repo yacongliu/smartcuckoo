@@ -34,22 +34,23 @@
 <!--south start-->
 <div data-options="region:'south',split:true,border:false"
      style="height: 30px;line-height:30px; overflow: hidden;text-align: center;background-color: #eee">
-    <span>Copyright © 2015 power by <b>yacongliu</b></span>
+    <span>Copyright © 2017 power by <b>yacongliu</b></span>
 </div>
 <!--south end-->
 <!--west start-->
-<div data-options="region:'west',title:'菜单',split:true"
+<div data-options="region:'west',title:'菜单',split:true,border:false"
      style="width: 160px; overflow: hidden;overflow-y:auto; padding:0px">
     <div class="well well-small" style="padding: 5px 5px 5px 5px;">
         <ul id="layout_west_tree"></ul>
     </div>
 </div>
-<!--south end-->
+<!--west end-->
 <!--center start-->
 <div data-options="region:'center',border:false">
     <div id="index_tabs" class="easyui-tabs" style="overflow: hidden;">
         <div title="首页" data-options="iconCls:'fi-home',border:false" style="overflow: hidden;">
-            <script src='https://git.oschina.net/wangzhixuan/spring-shiro-training/widget_preview'></script>
+            <%--<script src='https://git.oschina.net/wangzhixuan/spring-shiro-training/widget_preview'></script>--%>
+            <img src="${staticPath }/assets/img/cuckoo-home.jpg" alt="home jpg">
         </div>
     </div>
 </div>

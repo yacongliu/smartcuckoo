@@ -21,9 +21,38 @@ public class ResourceController extends BaseController {
         @Autowired
         private ResourceServiceImpl resourceService;
 
+        /**
+         * 菜单树
+         * （尚未进行权限控制）
+         *
+         * @return
+         */
+
         @RequestMapping(value = "/tree", method = RequestMethod.POST)
         @ResponseBody
         public List<Tree> tree() {
                 return this.resourceService.selectAllMenu();
         }
+
+        /**
+         * 资源管理页
+         *
+         * @return
+         */
+        @RequestMapping(value = "/manager", method = RequestMethod.GET)
+        public String manager() {
+                return "admin/resource";
+        }
+
+        /**
+         * 资源管理列表
+         *
+         * @return
+         */
+        @RequestMapping(value = "/treeGrid", method = RequestMethod.POST)
+        @ResponseBody
+        public Object treeGrid() {
+                return this.resourceService.selectList();
+        }
+
 }

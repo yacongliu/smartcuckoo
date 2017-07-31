@@ -1,5 +1,7 @@
 package com.yacongliu.pojo;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
@@ -30,6 +32,7 @@ public class Resource implements Serializable {
         private String description;
 
         /*资源图标*/
+        @JsonProperty(value = "iconCls")
         private String icon;
 
         /*父级ID*/
