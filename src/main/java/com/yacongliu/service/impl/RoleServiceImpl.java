@@ -11,6 +11,7 @@ import com.yacongliu.util.CollectionUtil;
 import com.yacongliu.vo.PageInfoVo;
 import com.yacongliu.vo.Tree;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,11 +19,14 @@ import java.util.Map;
 import java.util.Set;
 
 /**
+ * Role 表数据服务层接口实现类
+ *
  * @author yacongliu on 2017/7/29.
  * @since v1.0.0
  */
+@Service
 public class RoleServiceImpl extends ServiceImpl<RoleMapper, Role> implements IRoleService {
-        @Autowired
+        @Autowired(required = false)
         private RoleMapper roleMapper;
 
         public List<Role> selectList() {
@@ -32,7 +36,7 @@ public class RoleServiceImpl extends ServiceImpl<RoleMapper, Role> implements IR
         }
 
         public void selectDataGrid(PageInfoVo pageInfoVo) {
-                Example example = new Example(RoleServiceImpl.class);
+                Example example = new Example(Role.class);
                 example.setOrderByClause(pageInfoVo.getSort() + " " + pageInfoVo.getOrder());
                 PageHelper.startPage(pageInfoVo.getNowpage(), pageInfoVo.getPagesize());
                 List<Role> roleList = this.roleMapper.selectByExample(example);

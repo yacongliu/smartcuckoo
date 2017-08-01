@@ -1,5 +1,8 @@
 package com.yacongliu.pojo;
 
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.Table;
 import java.io.Serializable;
 
@@ -12,6 +15,8 @@ import java.io.Serializable;
 public class Role implements Serializable {
         private static final long serialVersionUID = 1025128367057072845L;
 
+        @Id
+        @GeneratedValue(strategy = GenerationType.IDENTITY)
         private Long id;
 
         /*角色名*/

@@ -12,7 +12,7 @@ public class RoleResource implements Serializable {
         private static final long serialVersionUID = 6836909915874853111L;
 
         @Id
-        @GeneratedValue(strategy = GenerationType.AUTO)
+        @GeneratedValue(strategy = GenerationType.IDENTITY)
         private Long id;
 
         /*角色id*/

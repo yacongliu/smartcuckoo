@@ -42,4 +42,32 @@
         </where>
     </select>
 
+    <select id="selectUserPage" resultType="Map">
+        SELECT
+        t.id, t.username AS userName, t.`password`,
+        t.create_time AS createTime, t.user_type AS userType,
+        t.`status`, t.organization_id AS organizationId,
+        s.`name` AS organizationName, group_concat(o.`name`) AS rolesList
+        FROM user t
+        LEFT JOIN user_role r ON t.id = r.user_id
+        LEFT JOIN role o ON r.role_id = o.id
+        LEFT JOIN organization s ON s.id = t.organization_id
+        <where>
+            <if test=" username != null and username != '' ">
+                t.username = #{username}
+            </if>
+            <if test=" organizationId != null ">
+                t.organization_id = #{organizationId}
+            </if>
+            <if test=" startTime != null ">
+                <![CDATA[ and t.create_time >= #{startTime} ]]>
+            </if>
+            <if test=" endTime != null ">
+                <![CDATA[ and t.create_time <= #{endTime} ]]>
+            </if>
+        </where>
+        GROUP BY t.id
+    </select>
+
+
 </mapper>

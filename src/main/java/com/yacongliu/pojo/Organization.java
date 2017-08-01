@@ -1,5 +1,7 @@
 package com.yacongliu.pojo;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -16,7 +18,7 @@ public class Organization implements Serializable {
         private static final long serialVersionUID = 1611248676229453163L;
 
         @Id
-        @GeneratedValue(strategy = GenerationType.AUTO)
+        @GeneratedValue(strategy = GenerationType.IDENTITY)
         private Long id;
 
         /*组织名称*/
@@ -29,6 +31,7 @@ public class Organization implements Serializable {
         private String code;
 
         /*图标*/
+        @JsonProperty(value = "iconCls")
         private String icon;
 
         /*父级主键*/

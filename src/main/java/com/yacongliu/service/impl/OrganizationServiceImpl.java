@@ -7,6 +7,7 @@ import com.yacongliu.service.IOrganizationService;
 import com.yacongliu.service.common.ServiceImpl;
 import com.yacongliu.vo.Tree;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,6 +18,7 @@ import java.util.List;
  * @author yacongliu on 2017/7/29.
  * @since v1.0.0
  */
+@Service
 public class OrganizationServiceImpl extends ServiceImpl<OrganizationMapper, Organization> implements
         IOrganizationService {
 

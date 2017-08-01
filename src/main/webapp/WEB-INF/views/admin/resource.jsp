@@ -7,12 +7,10 @@
     </div>
 </div>
 <div id="resourceToolbar" style="display: none;">
-    <%--    <shiro:hasPermission name="/resource/add">
-            <a onclick="addResourceFun();" href="javascript:void(0);" class="easyui-linkbutton"
-               data-options="plain:true,iconCls:'fi-plus icon-green'">添加</a>
-        </shiro:hasPermission>--%>
-</div>
-ro:hasPermission>--%>
+    <%--<shiro:hasPermission name="/resource/add">--%>
+    <a onclick="addResourceFun();" href="javascript:void(0);" class="easyui-linkbutton"
+       data-options="plain:true,iconCls:'fi-plus icon-green'">添加</a>
+    <%--</shiro:hasPermission>--%>
 </div>
 
 <script type="text/javascript" charset="UTF-8">

@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.util.List;
 
 /**
+ * 资源管理
+ *
  * @author yacongliu on 2017/7/30.
  * @since v1.0.0
  */

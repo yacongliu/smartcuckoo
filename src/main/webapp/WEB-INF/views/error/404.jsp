@@ -10,6 +10,6 @@
     <link rel="shortcut icon" href="${staticPath }/assets/img/favicon.ico">
 </head>
 <body>
-    <img src="${staticPath }/assets/img/404.jpg" alt="404">
+<img src="${staticPath }/assets/img/404.jpg" alt="404" style="max-width: 100%">
 </body>
 </html>

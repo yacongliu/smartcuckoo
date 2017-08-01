@@ -12,9 +12,9 @@
           href="${staticPath }/assets/js/jquery-easyui-1.5/themes/gray/easyui.css"/>
     <link rel="stylesheet" type="text/css"
           href="${staticPath }/assets/js/jquery-easyui-1.5/themes/icon.css"/>
-    <link rel="stylesheet" href="${staticPath }/assets/css/foundation-icons/foundation-icons.css">
-    <link rel="stylesheet" href="${staticPath }/assets/css/dreamlu.css">
-    <link rel="stylesheet" href="${staticPath }/assets/css/icons-view.css">
+    <%--<link rel="stylesheet" href="${staticPath }/assets/css/foundation-icons/foundation-icons.css">--%>
+    <%--<link rel="stylesheet" href="${staticPath }/assets/css/dreamlu.css">--%>
+    <%--<link rel="stylesheet" href="${staticPath }/assets/css/icons-view.css">--%>
 </head>
 <body class="easyui-layout">
 
@@ -50,7 +50,7 @@
     <div id="index_tabs" class="easyui-tabs" style="overflow: hidden;">
         <div title="首页" data-options="iconCls:'fi-home',border:false" style="overflow: hidden;">
             <%--<script src='https://git.oschina.net/wangzhixuan/spring-shiro-training/widget_preview'></script>--%>
-            <img src="${staticPath }/assets/img/cuckoo-home.jpg" alt="home jpg">
+            <img src="${staticPath }/assets/img/cuckoo-home.jpg" alt="home jpg" style="max-width: 100%">
         </div>
     </div>
 </div>
@@ -68,7 +68,9 @@
 <script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
 <script src="${staticPath }/assets/js/jquery-easyui-1.5/jquery.easyui.min.js"></script>
 <script src="${staticPath }/assets/js/jquery-easyui-1.5/locale/easyui-lang-zh_CN.js" charset="UTF-8"></script>
-<script src="${staticPath }/assets/js/extJs.js"></script>
+<%--<script src="${staticPath }/assets/js/extJs.js"></script>--%>
+<script type="text/javascript" src="${staticPath }/assets/js/My97DatePicker/WdatePicker.js"
+        charset="utf-8"></script>
 <script type="text/javascript">
     var index_tabs;
     var indexTabsMenu;
