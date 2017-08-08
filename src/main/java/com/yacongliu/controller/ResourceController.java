@@ -6,8 +6,10 @@ import com.yacongliu.service.impl.ResourceServiceImpl;
 import com.yacongliu.vo.Tree;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.Date;
@@ -69,6 +71,12 @@ public class ResourceController extends BaseController {
                 return "admin/resourceAdd";
         }
 
+        /**
+         * 添加资源
+         *
+         * @param resource
+         * @return
+         */
         @RequestMapping(value = "/add", method = RequestMethod.POST)
         @ResponseBody
         public Object add(Resource resource) {
@@ -86,11 +94,40 @@ public class ResourceController extends BaseController {
 
         }
 
+        /**
+         * 删除资源
+         *
+         * @param id
+         * @return
+         */
         @RequestMapping(value = "/delete", method = RequestMethod.POST)
         @ResponseBody
         public Object delete(Long id) {
                 this.resourceService.deleteById(id);
                 return renderSuccess("删除成功！");
+        }
+
+        /**
+         * 编辑资源页
+         *
+         * @param model
+         * @param id
+         * @return
+         */
+        @RequestMapping(value = "/editPage", method = RequestMethod.GET)
+        public String editPage(@RequestParam Long id, Model model) {
+                Resource resource = this.resourceService.selectById(id);
+                model.addAttribute("resource", resource);
+                return "admin/resourceEdit";
+        }
+
+        @RequestMapping(value = "/edit", method = RequestMethod.POST)
+        @ResponseBody
+        public Object edit(Resource resource) {
+                //这里一定不能忘记更新时间，这里应该有updateTime，为了方便
+                resource.setCreateTime(new Date());
+                this.resourceService.update(resource);
+                return renderSuccess("修改成功！");
         }
 
 }

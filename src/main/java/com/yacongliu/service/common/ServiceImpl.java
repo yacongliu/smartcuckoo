@@ -5,7 +5,6 @@ import com.github.abel533.mapper.Mapper;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
 import com.google.common.base.Preconditions;
-import com.yacongliu.service.common.IService;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.List;
@@ -83,13 +82,22 @@ public class ServiceImpl<M extends Mapper<T>, T> implements IService<T> {
         }
 
         /**
+         * 根据ID 进行查询
+         *
+         * @param id
+         * @return
+         */
+        public T selectById(Object id) {
+                return this.mapper.selectByPrimaryKey(id);
+        }
+
+        /**
          * @return
          * @desc 查询所有数据
          */
         public List<T> selectAll() {
                 return this.mapper.select(null);
         }
-
 
         /**
          * @param entity

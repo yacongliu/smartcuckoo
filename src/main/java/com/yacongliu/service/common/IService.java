@@ -32,7 +32,7 @@ public interface IService<T> {
          * @return
          * @desc 根据ID物理删除
          */
-        boolean deleteById(T id);
+        boolean deleteById(Object id);
 
         /**
          * @param clazz    类型
@@ -56,6 +56,14 @@ public interface IService<T> {
          * @desc 根据条件查询一条数据，如果有多条数据则会抛出异常
          */
         T selectOne(T entity);
+
+        /**
+         * 根据ID 进行查询
+         *
+         * @param id
+         * @return
+         */
+        T selectById(Object id);
 
         /**
          * @return
