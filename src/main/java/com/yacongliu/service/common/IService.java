@@ -32,7 +32,7 @@ public interface IService<T> {
          * @return
          * @desc 根据ID物理删除
          */
-        boolean deleteById(T entity);
+        boolean deleteById(T id);
 
         /**
          * @param clazz    类型

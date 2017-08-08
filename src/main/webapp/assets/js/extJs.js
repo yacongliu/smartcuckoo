@@ -231,7 +231,7 @@ $.extend($.fn.datagrid.methods, gridTooltipOptions);
  *
  *
  */
-$.extend($.fn.treegrid.methods, gridTooltipOptions);
+// $.extend($.fn.treegrid.methods, gridTooltipOptions);
 
 /**
  *

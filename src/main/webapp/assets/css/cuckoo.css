@@ -97,8 +97,9 @@ h2 {
 }
 
 [class*="fi-"] {
-    color: #5f9ea0;
-    font-size: 18px;
+    color: #57a05b;
+    /*color: #4116ac;*/
+    font-size: 16px;
     background-image: none !important;
     overflow: visible !important;
 }

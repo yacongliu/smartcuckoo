@@ -46,8 +46,8 @@ public class ServiceImpl<M extends Mapper<T>, T> implements IService<T> {
          * @return
          * @desc 根据ID物理删除
          */
-        public boolean deleteById(T entity) {
-                return this.mapper.deleteByPrimaryKey(entity) == 1;
+        public boolean deleteById(Object id) {
+                return this.mapper.deleteByPrimaryKey(id) == 1;
         }
 
         /**
